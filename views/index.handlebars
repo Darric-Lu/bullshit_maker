@@ -7,42 +7,22 @@
           </hr>
           <form method="POST" action="/">
             <div class="row mx-1">
-              <div class="col-12 col-sm-4">
-                <div class="card align-items-center">
-                  <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
-                    class="card-img-top" alt="工程師">
-                  <div class="card-body">
-                    <div class="custom-control custom-radio">
-                      <input class="form-check-input" type="radio" name="target" id="engineer" value="engineer">
-                      <label class="form-check-label" for="engineer">工程師</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-4">
-                <div class="card align-items-center">
-                  <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
-                    class="card-img-top" alt="設計師">
-                  <div class="card-body">
-                    <div class="custom-control custom-radio">
-                      <input class="form-check-input" type="radio" name="target" id="designer" value="designer">
-                      <label class="form-check-label" for="designer">設計師</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {{#each data}}
               <div class=" col-12 col-sm-4">
                 <div class="card align-items-center">
-                  <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
-                    class="card-img-top" alt="企業家">
+                  <div class="img-cover">
+                    <img src="{{this.img}}" class="card-img-top" alt="{{this.character}}">
+                  </div>
                   <div class="card-body">
                     <div class="custom-control custom-radio">
-                      <input class="form-check-input" type="radio" name="target" id="entrepreneur" value="entrepreneur">
-                      <label class="form-check-label" for="entrepreneur">創業家</label>
+                      <input class="form-check-input" type="radio" name="target" id="{{this.character_e}}"
+                        value="{{this.character_e}}">
+                      <label class="form-check-label" for="entrepreneur">{{this.character}}</label>
                     </div>
                   </div>
                 </div>
               </div>
+              {{/each}}
               <div class="col-sm-12">
                 <div class="row ">
                   <div class="col-sm-2 mt-3">
@@ -58,5 +38,4 @@
       </div>
     </div>
   </div>
-</div>
 </div>

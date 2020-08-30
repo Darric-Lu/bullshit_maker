@@ -1,3 +1,4 @@
+const characterData = require('./character.json') //載入
 function sample(array) {
   const index = Math.floor(Math.random() * array.length)
   return array[index]
